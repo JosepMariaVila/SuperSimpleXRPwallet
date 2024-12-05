@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>XRP WALLET</title>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <style>
+       body{font-family: "Work Sans", sans-serif;padding: 20px;background: #ce91e2;}
+       h1{font-weight: bold;}
+       input, button {padding: 6px;margin-bottom: 8px;}
+       button{font-weight: bold;font-family: "Work Sans", sans-serif;}
+       td{vertical-align: middle;}
+    </style>
+    <script src='xrpl-latest-min.js'></script>
+    <script src='xrpl-latest.js'></script>
+    <script src='xrpwallet.js'></script>
+    <script>
+      if (typeof module !== "undefined") {
+        const xrpl = require('xrpl')
+      }
+
+    </script>
+  </head>
+  
+<!-- ************************************************************** -->
+<!-- ********************** The Form ****************************** -->
+<!-- ************************************************************** -->
+
+  <body>
+    <h1>XRP WALLET</h1>
+    <form id="theForm">
+      Net:  
+      <input type="radio" id="mn" name="server"
+        value="wss://xrplcluster.com" checked>
+      <label for="mainnet">Mainnet</label>
+      &nbsp;&nbsp;
+      &nbsp;&nbsp;
+      &nbsp;&nbsp;
+      Algo:  
+      <input type="radio" id="ed" name="algorit" value="ed25519" checked>
+      <label for="dedd">Ed25519</label>
+      &nbsp;&nbsp;
+      <br/><br/>
+      <button type="button" onClick="getAccount2()">Create a mainnet account (do it offline)</button>
+      <br/><br/>
+      <button type="button" onClick="getAccountsFromSeeds()">Or get account from seed:
+      </button>
+      <br/>
+      <textarea id="seeds" cols="34" rows= "1"></textarea>
+      <br/><br/>
+      <table>
+        <tr valign="top">
+          <td>
+            <table>
+              <tr valign="top">
+                <td>
+                  <table>
+                    <tr valign="top">
+                      <td align="right">
+                        Account
+                      </td>
+                      <td>
+                        <input type="text" id="standbyAccountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        Seed
+                      </td>
+                      <td>
+                        <input type="text" id="standbySeedField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        XRP Balance
+                      </td>
+                      <td>
+                        <input type="text" id="standbyBalanceField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        Amount
+                      </td>
+                      <td>
+                        <input type="text" id="standbyAmountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                   <tr>
+                      <td align="right">
+                        Destination
+                      </td>
+                      <td>
+                        <input type="text" id="standbyDestinationField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                  </table>
+                  <br/>
+                  <button type="button" onClick="reload()">Clear fields</button>
+                  <br/>
+                  <button type="button" onClick="sendXRP()">Send XRP</button>
+                  <p align="right">
+                    <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
