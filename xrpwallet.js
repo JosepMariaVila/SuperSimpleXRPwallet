@@ -8,13 +8,17 @@ function getNet() {
   return net;
 } // End of getNet()
 
-// ******************** GET ALGORITHM ********
+
+// *******************************************************
+// ******************** Get Algorithm ********************
+// *******************************************************
 
 function getAlgo() {
   let algo;
   if (document.getElementById("ed").checked) algo = "ed25519";
   return algo;
 } // End of getAlgo()
+
 
 // *******************************************************
 // ************* Create XRP Mainnet Account **************
@@ -34,6 +38,7 @@ async function getAccount2() {
   standbyAmountField.value = "";
   standbyDestinationField.value = "";
 } // End of getAccount2()
+
 
 // *******************************************************
 // ********** Get Accounts from Seeds ********************
@@ -71,6 +76,7 @@ async function getAccountsFromSeeds() {
   client.disconnect();
 } // End of getAccountsFromSeeds()
 
+
 // *******************************************************
 // ******************** Send XRP *************************
 // *******************************************************
@@ -106,6 +112,7 @@ async function sendXRP() {
   // ------------------------------------------------- Sign prepared instructions
   const signed = standby_wallet.sign(prepared);
   console.log(signed);
+
   // -------------------------------------------------------- Submit signed blob
   const tx = await client.submitAndWait(signed.tx_blob);
   console.log(tx);
@@ -119,6 +126,7 @@ async function sendXRP() {
   );
   client.disconnect();
 } // End of sendXRP()
+
 
 async function reload() {
   window.location.reload();
