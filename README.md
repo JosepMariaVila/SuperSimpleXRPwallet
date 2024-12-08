@@ -1,4 +1,4 @@
-# SupersimpleXRPwallet
+# SuperSimpleXRPwallet
 A super simple javascript XRP wallet to create new accounts offline, check balances and send XRP.
 
 It uses a seed to derive the account address and sign transactions, it uses ed25519 algorithm, so just use it with seeds created with ed25519 algo.
