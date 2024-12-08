@@ -17,4 +17,5 @@ It allows to create a Mainnet account (which has to be activated later with XRP)
 
 It allows to check balances and send XRP. Warning: if you sign and send a transaction in the same computer, as it has internet conection, we can consider the private key compromised once broadcasted the transaction. So, each time you send XRP you should generate a new keyparir using a computer that never is connected to the internet and send your XRP there.
 
-Demo online here, just for educative purposes: https://skunk-proper-smoothly.ngrok-free.app/tools/supersimpleXRPwallet/xrpwallet
+Demo online just for educational purposes here: 
+https://skunk-proper-smoothly.ngrok-free.app/tools/supersimpleXRPwallet/xrpwallet
