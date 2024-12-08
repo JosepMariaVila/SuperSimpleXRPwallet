@@ -15,6 +15,6 @@ It works for the XRPL Mainet.
 
 It allows to create a Mainnet account (which has to be activated later with XRP). Do it offline, it's purely mathematical.
 
-It allows to check balances and send XRP.
+It allows to check balances and send XRP. Warning: if you sign and send a transaction in the same computer, as it has internet conection, we can consider the private key compromised once broadcasted the transaction. So, each time you send XRP you should generat a new keyparir using a computer that never is connected to the internet and send your XRP there.
 
 You can try it here: https://skunk-proper-smoothly.ngrok-free.app/tools/supersimpleXRPwallet/xrpwallet
